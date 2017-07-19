@@ -1,0 +1,36 @@
+<html ng-app="clientes">
+    <head>
+        <meta charset="utf-8">
+        <title>Mostrar clientes - Ajax</title>
+        <script src="javascript/angular.js"></script>
+        <script src="javascript/clientes.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/estilo.css">
+    </head>
+    <body ng-controller="Ctrl">
+        <fieldset>
+            <legend>Clientes</legend>
+            <table cellspacing="0px"> 
+                <tr>
+                    <th>ID</th>
+                    <th>Pessoa</th>
+                    <th>Razão social</th>
+                    <th>Nome Fantasia</th>
+                    <th>CPF/CNPJ</th>
+                    <th>(DDD) Telefone</th>
+                    <th>Site</th>
+                    <th>Cliente desde</th>
+                </tr>
+                <tr ng-repeat="cliente in clientes">
+                   <td>{{ cliente.id }}</td>
+                   <td>{{ cliente.pessoa }}</td>
+                   <td>{{ cliente.razao_social }}</td>
+                   <td>{{ cliente.nome_fantasia }}</td>
+                   <td>{{ cliente.cpf_cnpj }}</td>
+                   <td>({{ cliente.ddd }}) {{cliente.telefone}}</td>
+                   <td>{{ cliente.site }}</td>
+                   <td>{{ cliente.cliente_desde }}</td>
+                </tr>
+            </table>
+        </fieldset>
+    </body>
+</html>
